@@ -1,22 +1,176 @@
-body {
+body,
+ul,
+p,
+h1,
+h2 {
   margin: 0;
   padding: 0;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
 }
 
 body {
   font-family: 'Helvetica', Arial, sans-serif;
 }
 
+header {
+  background-color: #707070;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+
+nav {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul {
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  margin: 0 20px;
+}
+
+.logo,
+nav a {
+  display: block;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #FFF;
+} 
+
+.logo {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .6px;
+  margin-left: 20px;
+  padding: 12px 10px;
+}
+
+nav a {
+  color: #DADADA;
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: .5px;
+  padding: 16px 10px;
+}
+
+nav a.active {
+  color: #FFF;
+  font-weight: 400;
+}
+
 main {
   position: relative;
   margin: 0 auto;
+  max-width: 1020px;
   width: 70%;
 }
 
+section {
+  padding: 40px 0 20px;
+}
+
+h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.posts {
+  list-style: none;
+  text-align: center;
+}
+
+.posts li {
+  display: inline-block;
+  margin-bottom: 30px;
+  min-width: 250px;
+  padding: 0 6px;
+  text-align: left;
+  vertical-align: top;
+  width: 31.6%;
+}
+
+.posts li a {
+  text-decoration: none;
+  width: 100%;
+}
+
+.posts li a img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.posts li a h2 {
+  color: #000;
+  font-family: georgia, serif;
+  font-weight: 300;
+  letter-spacing: .4px;
+  margin-bottom: 20px;
+}
+
+.posts li a:hover h2 {
+  text-decoration: underline;
+}
+
+.posts li p {
+  color: #666;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
 .sidebar {
+  display: none;
   height: 100%;
   position: absolute;
   right: 0;
   top: 0;
   width: 30%;
+  z-index: 8;
+}
+
+footer {
+  background-color: #EFEFEF;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+footer p {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  padding: 6px 0;
+  text-align: center;
+}
+
+@media (max-width: 479px) {
+  header,
+  section,
+  footer {
+    min-width: 420px;
+  }
+  .links {
+    display: none;
+  }
+  .posts li {
+    padding: 0;
+    width: 100%;
+  }
 }

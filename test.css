@@ -132,13 +132,27 @@ h1 {
 }
 
 .sidebar {
-  display: none;
+  background-color: rgba(250,250,250,.8);
   height: 100%;
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
   width: 30%;
   z-index: 8;
+  -webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, .1);
+          box-shadow: 0 0px 4px rgba(0, 0, 0, .1);
+
+}
+
+.sidebar .sidebar-container {
+  padding-top: 70px;
+}
+
+.sidebar h2 {
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
 }
 
 footer {
